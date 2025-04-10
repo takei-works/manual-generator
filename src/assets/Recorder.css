@@ -1,86 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: #1f2937;
+}
+
+/* レコーダー画面全体の中央揃え */
 .recorder-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f3f4f6; /* Tailwind: bg-gray-100 */
-    padding: 2.5rem 1rem;
-  }
-  
-  .recorder-card {
-    background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 100%;
-    max-width: 36rem;
-  }
-  
-  .recorder-heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937; /* Tailwind: text-gray-800 */
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .recorder-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .btn-record,
-  .btn-stop {
-    padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    color: white;
-    font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-record {
-    background-color: #2563eb;
-  }
-  
-  .btn-record:hover {
-    background-color: #1d4ed8;
-  }
-  
-  .btn-stop {
-    background-color: #ef4444;
-  }
-  
-  .btn-stop:hover {
-    background-color: #dc2626;
-  }
-  
-  .loading-text,
-  .error-text {
-    text-align: center;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
-  
-  .loading-text {
-    color: #2563eb;
-  }
-  
-  .error-text {
-    color: #ef4444;
-  }
-  
-  .result-area {
-    width: 100%;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: #f9fafb;
-    resize: none;
-    font-size: 0.875rem;
-    color: #374151;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+/* 中央の白カード */
+.recorder-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 36rem;
+}
+
+/* 見出し */
+.recorder-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ボタン並び */
+.recorder-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ボタン共通 */
+.btn-record,
+.btn-stop {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+/* ボタン色 */
+.btn-record {
+  background-color: #2563eb;
+}
+
+.btn-record:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-stop {
+  background-color: #ef4444;
+}
+
+.btn-stop:hover {
+  background-color: #dc2626;
+}
+
+/* ローディングとエラー */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  color: #2563eb;
+}
+
+.error-text {
+  color: #ef4444;
+}
+
+/* 結果エリア */
+.result-area {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  resize: none;
+  font-size: 0.875rem;
+  color: #374151;
+  box-sizing: border-box;
+}
