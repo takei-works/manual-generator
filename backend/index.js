@@ -149,6 +149,37 @@ app.post('/api/chat', async (req, res) => {
   res.json({ reply })
 })
 
+app.post('/api/upload', upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: 'ファイルがありません' })
+
+    const filePath = path.resolve(__dirname, req.file.path)
+    const ext = path.extname(req.file.originalname).toLowerCase()
+    let text = ''
+
+    if (ext === '.pdf') {
+      const pdfParse = require('pdf-parse')
+      const dataBuffer = fs.readFileSync(filePath)
+      const data = await pdfParse(dataBuffer)
+      text = data.text
+    } else if (ext === '.docx') {
+      const mammoth = require('mammoth')
+      const data = await mammoth.extractRawText({ path: filePath })
+      text = data.value
+    } else if (ext === '.txt') {
+      text = fs.readFileSync(filePath, 'utf8')
+    } else {
+      return res.status(400).json({ error: '対応していないファイル形式です（PDF, DOCX, TXT）' })
+    }
+
+    fs.unlinkSync(filePath) // アップロードファイル削除
+    res.json({ text })
+  } catch (err) {
+    console.error('❌ アップロードエラー:', err)
+    res.status(500).json({ error: 'アップロード処理中にエラーが発生しました' })
+  }
+})
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Whisper API server is running on http://localhost:${PORT}`)
 })
