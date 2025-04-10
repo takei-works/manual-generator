@@ -7,6 +7,7 @@ import Recorder from './components/Recorder.vue'
 import ChatBot from './components/ChatBot.vue'
 import UploadManual from './components/UploadManual.vue'
 import ManualEdit from './components/ManualEdit.vue'
+import TextManual from './components/TextManual.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -15,7 +16,8 @@ const routes = [
   { path: '/manual/:id', component: ManualDetail },
   { path: '/chat', component: ChatBot },
   { path: '/upload', component: UploadManual },
-  { path: '/manual/edit', component: ManualEdit }
+  { path: '/manual/edit', component: ManualEdit },
+  { path: '/manual/create', component: TextManual },
 ]
 
 const router = createRouter({

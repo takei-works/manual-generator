@@ -10,6 +10,11 @@
         <router-link to="/upload" class="home-card">
           📄 資料から作成する
         </router-link>
+
+        <router-link to="/manual/create" class="home-card">
+        ✍️ テキストで作成する
+        </router-link>
+
       </div>
     </div>
   </template>
