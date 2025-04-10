@@ -41,7 +41,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import './Recorder.css'
+import '../assets/Recorder.css'
 
 let mediaRecorder = null
 const audioChunks = []
