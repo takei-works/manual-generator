@@ -1,5 +1,5 @@
 <template>
-    <div class="manual-edit-container">
+    <div class="page-container manual-edit-container">
       <div class="manual-edit-inner">
         <h2 class="manual-edit-heading">✍️ テキスト入力でマニュアル作成</h2>
   

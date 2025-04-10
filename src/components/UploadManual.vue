@@ -1,14 +1,18 @@
 <template>
-    <div class="upload-container">
+    <div class="page-container upload-container">
       <h2 class="upload-heading">📄 資料からマニュアル作成</h2>
   
       <form @submit.prevent="handleUpload" class="upload-form">
-        <input
-          type="file"
-          accept=".pdf,.docx,.txt"
-          @change="handleFile"
-          class="upload-input"
-        />
+        <label class="upload-label">
+          ファイルを選択（PDF / Word / TXT）
+          <input
+            type="file"
+            accept=".pdf,.docx,.txt"
+            @change="handleFile"
+            class="upload-input"
+          />
+        </label>
+  
         <button
           type="submit"
           :disabled="!selectedFile || isLoading"
@@ -26,6 +30,7 @@
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import { manualDraft } from '@/store/manualDraft'
+  import '@/assets/UploadManual.css' // ✅ 外部CSS読み込み
   
   const selectedFile = ref(null)
   const isLoading = ref(false)
@@ -57,16 +62,8 @@
       if (data.error) {
         error.value = data.error
       } else {
-        // 自動タイトル生成
         const autoTitle = data.text.split('\n')[0].slice(0, 20) || '無題マニュアル'
-  
-        // 状態に保存
-        manualDraft.value = {
-          title: autoTitle,
-          text: data.text
-        }
-  
-        // 編集ページへ遷移
+        manualDraft.value = { title: autoTitle, text: data.text }
         router.push('/manual/edit')
       }
     } catch (err) {

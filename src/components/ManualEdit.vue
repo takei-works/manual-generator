@@ -1,5 +1,5 @@
 <template>
-    <div class="manual-edit-container">
+    <div class="page-container manual-edit-container">
       <div class="manual-edit-inner">
         <h2 class="manual-edit-heading">📝 マニュアル作成</h2>
   
@@ -18,6 +18,7 @@
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import { manualDraft } from '@/store/manualDraft'
+  import '@/assets/ManualDetail.css'
   
   const router = useRouter()
   

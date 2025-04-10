@@ -1,5 +1,5 @@
 <template>
-  <div class="manual-list-container">
+  <div class="page-container manual-list-container">
     <h2 class="manual-list-heading">📚 保存されたマニュアル一覧</h2>
 
     <div class="search-bar-wrapper">
@@ -25,7 +25,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import '@/assets/ManualList.css' // ✅ 正しい場所から読み込む（@ = src）
+import '@/assets/ManualList.css'
 
 const manuals = ref([])
 const searchQuery = ref('')

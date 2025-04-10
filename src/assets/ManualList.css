@@ -1,65 +1,69 @@
 .manual-list-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .manual-list-heading {
-    font-size: 1.75rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .search-bar-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-  
-  .search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.5rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 9999px;
-    font-size: 0.9rem;
-  }
-  
-  .manual-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .manual-card {
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .manual-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #2563eb;
-    text-decoration: none;
-  }
-  
-  .manual-title:hover {
-    text-decoration: underline;
-  }
-  
-  .manual-timestamp {
-    font-size: 0.8rem;
-    color: #6b7280;
-    margin: 0.5rem 0;
-  }
-  
-  .manual-text {
-    font-size: 0.95rem;
-    color: #374151;
-    white-space: pre-wrap;
-  }
-  
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.manual-list-heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  background-color: #f9fafb;
+}
+
+.manual-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.manual-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.manual-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.manual-title:hover {
+  text-decoration: underline;
+}
+
+.manual-timestamp {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0.5rem 0;
+}
+
+.manual-text {
+  font-size: 0.95rem;
+  color: #374151;
+  white-space: pre-wrap;
+}

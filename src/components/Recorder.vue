@@ -1,5 +1,5 @@
 <template>
-  <div class="recorder-container">
+  <div class="page-container recorder-container">
     <div class="recorder-card">
       <h2 class="recorder-heading">🎙️ 音声でマニュアルを作成</h2>
 

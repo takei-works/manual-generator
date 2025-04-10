@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-container">
+  <div class="page-container chat-container">
     <h2 class="chat-heading">🤖 作業マニュアルAIチャット</h2>
 
     <div class="chat-messages">

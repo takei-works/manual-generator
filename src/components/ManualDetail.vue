@@ -1,5 +1,5 @@
 <template>
-  <div v-if="manual" class="manual-edit-container">
+  <div v-if="manual" class="page-container manual-edit-container">
     <div class="manual-edit-inner">
       <h2 class="manual-edit-heading">📝 マニュアル編集</h2>
 

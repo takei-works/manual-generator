@@ -1,39 +1,35 @@
 .home-container {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .home-heading {
-    font-size: 1.75rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #1f2937;
-  }
-  
-  .home-options {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .home-card {
-    background-color: #ffffff;
-    border: 1px solid #d1d5db;
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2563eb;
-    text-decoration: none;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .home-card:hover {
-    background-color: #f0f9ff;
-    transform: translateY(-4px);
-  }
-  
+  text-align: center;
+}
+
+.home-heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0 0 2rem;
+  color: #1f2937;
+}
+
+.home-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-card {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-card:hover {
+  background-color: #f0f9ff;
+  transform: translateY(-4px);
+}
