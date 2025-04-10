@@ -31,7 +31,7 @@ const manuals = ref([])
 const searchQuery = ref('')
 
 const fetchManuals = async (keyword = '') => {
-  const res = await fetch(`http://150.91.166.122:3001/api/manuals/search?q=${encodeURIComponent(keyword)}`)
+  const res = await fetch(`http://localhost:3001/api/manuals/search?q=${encodeURIComponent(keyword)}`)
   manuals.value = await res.json()
 }
 

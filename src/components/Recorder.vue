@@ -68,7 +68,7 @@ const startRecording = async () => {
       formData.append('audio', audioBlob, 'voice.webm')
 
       try {
-        const response = await fetch('http://150.91.166.122:3001/api/transcribe', {
+        const response = await fetch('http://localhost:3001/api/transcribe', {
           method: 'POST',
           body: formData
         })
@@ -80,7 +80,7 @@ const startRecording = async () => {
 
         const autoTitle = data.text.split('\n')[0].slice(0, 20) || '無題マニュアル'
 
-        await fetch('http://150.91.166.122:3001/api/manuals', {
+        await fetch('http://localhost:3001/api/manuals', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
